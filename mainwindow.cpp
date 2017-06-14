@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent) :
     //Tao vung MDI
     mdi=new QMdiArea();
     user=new USER();
+    //Show toolbar
+    showToolbar();
     //Bat dau show form login
     LoginShow();
     Logined=false;
@@ -192,3 +194,22 @@ void MainWindow::on_actionVersion_triggered()
 {
     QMessageBox::information(this,"Thông tin phiên bản","LIBPRO \n Version 2.0 \n Nhóm tác giả: \n Lương Tuấn Kiệt - 1611695 \n Nguyễn Văn Tường - 1614028 \n Huỳnh Phúc Nghị - 1612233 \n Vũ Hoàng Văn 1614063");
 }
+
+void MainWindow::showToolbar() {
+    QPixmap newpix("new.png");
+    QPixmap logoutpix("logout.png");
+    QToolBar *toolbar = addToolBar("Thanh công cụ");
+   // toolbar->addSeparator();
+    toolbar->setIconSize(QSize(18,18));
+    QAction *btnNewWindow = toolbar->addAction(QIcon(newpix), "New LIBPRO window");
+    QAction *btnLogOut = toolbar -> addAction(QIcon(logoutpix),"Log out");
+    connect(btnNewWindow, &QAction::triggered, this,&MainWindow::createWindow);
+    connect(btnLogOut, &QAction::triggered,this,&MainWindow::on_actionLogout);
+}
+
+void MainWindow::createWindow() {
+    MainWindow* newMainWindow = new MainWindow;
+    newMainWindow->show();
+}
+
+

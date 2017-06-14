@@ -29,6 +29,8 @@ private:
     void LoginShow();
     void ReaderShow();
     void LoadPhieuMuon();
+    void showToolbar();
+    void createWindow();
 private slots:
     void on_actionLogin();
     void on_actionLogout();
@@ -38,6 +40,8 @@ private slots:
     void on_actionViewInfo();
     void on_changePass();
     void on_actionVersion_triggered();
+
+    void on_actionLogout_triggered();
 
 signals:
     void LoginChanged(bool);
