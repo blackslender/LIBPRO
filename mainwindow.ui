@@ -20,12 +20,12 @@
      <x>0</x>
      <y>0</y>
      <width>842</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuT_i_kho_n">
     <property name="title">
-     <string>Tài khoản</string>
+     <string>Tài &amp;khoản</string>
     </property>
     <addaction name="actionLogin"/>
     <addaction name="actionChangeRole"/>
@@ -35,13 +35,20 @@
    </widget>
    <widget class="QMenu" name="menuTh_ng_tin">
     <property name="title">
-     <string>Thông tin</string>
+     <string>Th&amp;ông tin</string>
     </property>
     <addaction name="actionViewInfo"/>
     <addaction name="actionChangePass"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Abo&amp;ut...</string>
+    </property>
+    <addaction name="actionVersion"/>
+   </widget>
    <addaction name="menuT_i_kho_n"/>
    <addaction name="menuTh_ng_tin"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -54,32 +61,37 @@
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionLogin">
    <property name="text">
-    <string>Đăng nhập</string>
+    <string>Đăng &amp;nhập</string>
    </property>
   </action>
   <action name="actionLogout">
    <property name="text">
-    <string>Đăng xuất</string>
+    <string>Đăng &amp;xuất</string>
    </property>
   </action>
   <action name="actionExit">
    <property name="text">
-    <string>Thoát</string>
+    <string>&amp;Thoát</string>
    </property>
   </action>
   <action name="actionViewInfo">
    <property name="text">
-    <string>Xem thông tin cá nhân</string>
+    <string>&amp;Xem thông tin cá nhân</string>
    </property>
   </action>
   <action name="actionChangePass">
    <property name="text">
-    <string>Đổi mật khẩu</string>
+    <string>Đổi &amp;mật khẩu</string>
    </property>
   </action>
   <action name="actionChangeRole">
    <property name="text">
-    <string>Đăng nhập vai trò khác</string>
+    <string>Đăng nhập &amp;vai trò khác</string>
+   </property>
+  </action>
+  <action name="actionVersion">
+   <property name="text">
+    <string>&amp;Version</string>
    </property>
   </action>
  </widget>

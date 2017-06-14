@@ -5,7 +5,7 @@
 TEMPLATE = app
 TARGET = LIBMANAGER
 INCLUDEPATH += .
-
+QT += widgets sql
 # Input
 HEADERS += adduser.h \
            admin.h \

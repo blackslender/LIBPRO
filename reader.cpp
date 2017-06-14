@@ -20,6 +20,7 @@ READER::READER(QSqlDatabase *db,USER *user,QWidget *parent) :
     ui->tableMuon->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(ui->tableMuon,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(on_ContextMenu(QPoint)));
     FormLoad();
+    on_btnSearch_clicked();
 }
 
 void READER::resizeEvent(QResizeEvent *event)

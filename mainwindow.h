@@ -37,6 +37,8 @@ private slots:
     void on_actionChangeRole();
     void on_actionViewInfo();
     void on_changePass();
+    void on_actionVersion_triggered();
+
 signals:
     void LoginChanged(bool);
 };
