@@ -1,6 +1,7 @@
 #ifndef USER_H
 #define USER_H
 #define DATABASE (QGuiApplication::applicationDirPath()+"/data.db")
+#define ICON (QGuiApplication::applicationDirPath()+"/icon.png")
 #include <QString>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>

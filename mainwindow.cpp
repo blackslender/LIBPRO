@@ -32,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent) :
     //ket thuc show form login
     setCentralWidget(mdi);
     //
+    this->setWindowTitle("LIBPRO");
+    this->setWindowIcon(QIcon(ICON));
     //
     ui->actionLogin->setEnabled(true);
     ui->actionChangeRole->setEnabled(false);
