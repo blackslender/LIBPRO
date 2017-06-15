@@ -22,7 +22,8 @@ HEADERS += adduser.h \
            reader.h \
            themsachs.h \
            user.h \
-    changerole.h
+    changerole.h \
+    feedback.h
 FORMS += adduser.ui \
          admin.ui \
          changeinfomation.ui \
@@ -33,7 +34,8 @@ FORMS += adduser.ui \
          muonsach.ui \
          reader.ui \
          themsachs.ui \
-    changerole.ui
+    changerole.ui \
+    feedback.ui
 SOURCES += adduser.cpp \
            admin.cpp \
            book.cpp \
@@ -50,4 +52,5 @@ SOURCES += adduser.cpp \
            reader.cpp \
            themsachs.cpp \
            user.cpp \
-    changerole.cpp
+    changerole.cpp \
+    feedback.cpp

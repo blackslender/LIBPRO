@@ -21,6 +21,7 @@ private:
     //attribute
     Ui::MainWindow *ui;
     QSqlDatabase *db;
+    QToolBar *toolbar = addToolBar("Thanh công cụ");
     QMdiArea *mdi;
     USER *user;
     bool Logined;
@@ -42,6 +43,8 @@ private slots:
     void on_actionVersion_triggered();
 
     void on_actionLogout_triggered();
+
+    void on_actionG_p_triggered();
 
 signals:
     void LoginChanged(bool);

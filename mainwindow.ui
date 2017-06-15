@@ -42,9 +42,10 @@
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>Abo&amp;ut...</string>
+     <string>Thê&amp;m...</string>
     </property>
     <addaction name="actionVersion"/>
+    <addaction name="actionG_p"/>
    </widget>
    <addaction name="menuT_i_kho_n"/>
    <addaction name="menuTh_ng_tin"/>
@@ -83,7 +84,12 @@
   </action>
   <action name="actionVersion">
    <property name="text">
-    <string>&amp;Version</string>
+    <string>&amp;Phiên bản</string>
+   </property>
+  </action>
+  <action name="actionG_p">
+   <property name="text">
+    <string>Góp &amp;ý</string>
    </property>
   </action>
  </widget>

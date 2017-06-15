@@ -12,7 +12,9 @@
 #define IsAdmin(role) ((role)&(UADMIN))
 #define IsLibMan(role) ((role)&(ULIBMAN))
 #define IsReader(role) ((role)&(UREADER))
+const QString VERSION = "2.0";
 class USER
+
 {
     private:
     QSqlDatabase *db;

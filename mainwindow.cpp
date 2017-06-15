@@ -13,6 +13,7 @@
 #include <QMdiSubWindow>
 #include <QLayout>
 #include <book.h>
+#include "feedback.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -192,18 +193,20 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionVersion_triggered()
 {
-    QMessageBox::information(this,"Thông tin phiên bản","LIBPRO \n Version 2.0 \n Nhóm tác giả: \n Lương Tuấn Kiệt - 1611695 \n Nguyễn Văn Tường - 1614028 \n Huỳnh Phúc Nghị - 1612233 \n Vũ Hoàng Văn 1614063");
+    QMessageBox::information(this,"Thông tin phiên bản","LIBPRO "+VERSION+" \n Nhóm tác giả: \n Lương Tuấn Kiệt - 1611695 \n Nguyễn Văn Tường - 1614028 \n Huỳnh Phúc Nghị - 1612233 \n Vũ Hoàng Văn 1614063");
 }
 
 void MainWindow::showToolbar() {
     QPixmap newpix("new.png");
     QPixmap logoutpix("logout.png");
-    QToolBar *toolbar = addToolBar("Thanh công cụ");
+    QPixmap changerole("changerole.png");
    // toolbar->addSeparator();
     toolbar->setIconSize(QSize(18,18));
-    QAction *btnNewWindow = toolbar->addAction(QIcon(newpix), "New LIBPRO window");
-    QAction *btnLogOut = toolbar -> addAction(QIcon(logoutpix),"Log out");
+    QAction *btnNewWindow = toolbar->addAction(QIcon(newpix), "Cửa số LIBPRO mới");
+    QAction *btnChangeRole = toolbar->addAction(QIcon(changerole),"Thay đổi tư cách đăng nhập");
+    QAction *btnLogOut = toolbar -> addAction(QIcon(logoutpix),"Đăng xuất");
     connect(btnNewWindow, &QAction::triggered, this,&MainWindow::createWindow);
+    connect(btnChangeRole,&QAction::triggered,this,&MainWindow::on_actionChangeRole);
     connect(btnLogOut, &QAction::triggered,this,&MainWindow::on_actionLogout);
 }
 
@@ -213,3 +216,9 @@ void MainWindow::createWindow() {
 }
 
 
+
+void MainWindow::on_actionG_p_triggered()
+{
+    Feedback *wfb = new Feedback;
+    wfb->show();
+}

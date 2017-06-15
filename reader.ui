@@ -131,10 +131,8 @@
     <enum>QAbstractScrollArea::AdjustIgnored</enum>
    </property>
   </widget>
-  <zorder>stackedWidget</zorder>
   <zorder>listWidget</zorder>
-  <zorder>tableBook</zorder>
-  <zorder></zorder>
+  <zorder>stackedWidget</zorder>
  </widget>
  <resources/>
  <connections/>

@@ -31,7 +31,7 @@ LOGIN::~LOGIN()
 
 void LOGIN::on_btnLogin_clicked()
 {
-   user->setData(ui->txtUser->text(),db);
+    user->setData(ui->txtUser->text(),db);
     int res=user->getError();
     QString thongbao;
     if(res!=USER::SUCCESS)
