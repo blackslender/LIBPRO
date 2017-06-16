@@ -222,3 +222,7 @@ void MainWindow::on_actionG_p_triggered()
     Feedback *wfb = new Feedback;
     wfb->show();
 }
+
+void MainWindow::on_actionLogout_triggered() {
+    MainWindow::on_actionLogout();
+}
