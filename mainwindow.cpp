@@ -161,6 +161,7 @@ void MainWindow::on_actionLogout()
     Logined=false;
     emit LoginChanged(Logined);
     foreach(QMdiSubWindow *child,mdi->subWindowList()) child->close();
+    LoginShow();
 }
 
 void MainWindow::on_actionViewInfo()
@@ -225,5 +226,9 @@ void MainWindow::on_actionG_p_triggered()
 }
 
 void MainWindow::on_actionLogout_triggered() {
+<<<<<<< HEAD
     ;
+=======
+    MainWindow::on_actionLogout();
+>>>>>>> 8638daea086ee449f93340ee8ea7864009a6a7a6
 }

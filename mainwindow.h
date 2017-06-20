@@ -41,7 +41,6 @@ private slots:
     void on_actionViewInfo();
     void on_changePass();
     void on_actionVersion_triggered();
-
     void on_actionLogout_triggered();
 
     void on_actionG_p_triggered();

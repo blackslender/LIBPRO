@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>842</width>
-    <height>541</height>
+    <width>840</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>842</width>
-     <height>31</height>
+     <width>840</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuT_i_kho_n">
@@ -89,7 +89,7 @@
   </action>
   <action name="actionG_p">
    <property name="text">
-    <string>Góp &amp;ý</string>
+    <string>&amp;Góp ý</string>
    </property>
   </action>
  </widget>
