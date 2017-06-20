@@ -14,6 +14,7 @@
 #include <QLayout>
 #include <book.h>
 #include "feedback.h"
+#include <QDir>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -22,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     //Load Database
     db=new QSqlDatabase(QSqlDatabase::addDatabase("QSQLITE"));
-    db->setDatabaseName(DATABASE);
+    db->setDatabaseName(DIR("data.db"));
     db->open();
     //Tao vung MDI
     mdi=new QMdiArea();
@@ -36,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setCentralWidget(mdi);
     //
     this->setWindowTitle("LIBPRO");
-    this->setWindowIcon(QIcon(ICON));
+    this->setWindowIcon(QIcon(DIR("icon.png")));
     //
     ui->actionLogin->setEnabled(true);
     ui->actionChangeRole->setEnabled(false);
@@ -54,7 +55,6 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionChangeRole,SIGNAL(triggered()),this,SLOT(on_actionChangeRole()));
     connect(ui->actionViewInfo,SIGNAL(triggered()),this,SLOT(on_actionViewInfo()));
     //
-    qDebug()<<QGuiApplication::applicationDirPath()+"/data.db";
 }
 void MainWindow::Load()
 {
@@ -199,9 +199,9 @@ void MainWindow::on_actionVersion_triggered()
 }
 
 void MainWindow::showToolbar() {
-    QPixmap newpix("new.png");
-    QPixmap logoutpix("logout.png");
-    QPixmap changerole("changerole.png");
+    QPixmap newpix(DIR("new.png"));
+    QPixmap logoutpix(DIR("logout.png"));
+    QPixmap changerole(DIR("changerole.png"));
    // toolbar->addSeparator();
     toolbar->setIconSize(QSize(18,18));
     QAction *btnNewWindow = toolbar->addAction(QIcon(newpix), "Cửa số LIBPRO mới");
@@ -226,9 +226,5 @@ void MainWindow::on_actionG_p_triggered()
 }
 
 void MainWindow::on_actionLogout_triggered() {
-<<<<<<< HEAD
-    ;
-=======
     MainWindow::on_actionLogout();
->>>>>>> 8638daea086ee449f93340ee8ea7864009a6a7a6
 }
