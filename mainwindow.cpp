@@ -54,6 +54,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionChangeRole,SIGNAL(triggered()),this,SLOT(on_actionChangeRole()));
     connect(ui->actionViewInfo,SIGNAL(triggered()),this,SLOT(on_actionViewInfo()));
     //
+    qDebug()<<QGuiApplication::applicationDirPath()+"/data.db";
 }
 void MainWindow::Load()
 {
@@ -221,4 +222,8 @@ void MainWindow::on_actionG_p_triggered()
 {
     Feedback *wfb = new Feedback;
     wfb->show();
+}
+
+void MainWindow::on_actionLogout_triggered() {
+    ;
 }
