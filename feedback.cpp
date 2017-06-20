@@ -16,7 +16,7 @@ Feedback::~Feedback()
 
 void Feedback::on_btnSend_released()
 {
-    db.setDatabaseName(DATABASE);
+    db.setDatabaseName(DIR("data.db"));
     db.open();
     QSqlQuery qr(db);
     qr.prepare("INSERT INTO FEEDBACK VALUES (?)");
