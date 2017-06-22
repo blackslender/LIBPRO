@@ -54,3 +54,4 @@ SOURCES += adduser.cpp \
            user.cpp \
     changerole.cpp \
     feedback.cpp
+RC_ICONS = favicon.ico
