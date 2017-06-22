@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent) :
     db->open();
     //Tao vung MDI
     mdi=new QMdiArea();
+    QImage background(DIR("background.png"));
+    mdi->setBackground(background);
     user=new USER();
     //Show toolbar
     showToolbar();
@@ -55,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->actionChangeRole,SIGNAL(triggered()),this,SLOT(on_actionChangeRole()));
     connect(ui->actionViewInfo,SIGNAL(triggered()),this,SLOT(on_actionViewInfo()));
     //
+    qDebug()<<DIR("data.db");
 }
 void MainWindow::Load()
 {
@@ -222,6 +225,7 @@ void MainWindow::createWindow() {
 void MainWindow::on_actionG_p_triggered()
 {
     Feedback *wfb = new Feedback;
+    QMdiSubWindow *wf=mdi->addSubWindow(wfb);
     wfb->show();
 }
 
